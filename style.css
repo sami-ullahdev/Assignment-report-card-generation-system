@@ -38,3 +38,13 @@ body {
 .logo > img {
     width: 40px;
 }
+
+.main-heading > h1 {
+    font-size: 40px;
+
+}
+
+.main-heading > p {
+
+    font-family: Arial, Helvetica, sans-serif;
+}
