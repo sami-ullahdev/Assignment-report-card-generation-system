@@ -20,12 +20,18 @@ body {
     border-radius: 15px;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+}
+
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     border-radius: 8px;
     transition-duration: 300ms;
 }
@@ -45,6 +51,5 @@ body {
 }
 
 .main-heading > p {
-
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 0Arial, Helvetica, sans-serif;
 }
