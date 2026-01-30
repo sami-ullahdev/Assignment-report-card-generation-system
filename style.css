@@ -12,7 +12,7 @@ body {
 }
 
 .main-container {
-    background-color: #f3f4f7;
+    background-color: #6d9992;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 15px;
     height: 500px;
@@ -52,4 +52,15 @@ body {
 
 .main-heading > p {
     font-family: 0Arial, Helvetica, sans-serif;
+}
+
+.subject-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    width: 770px;
+    height: 200px;
+    border-radius: 12px;
 }
