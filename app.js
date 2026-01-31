@@ -1,147 +1,141 @@
 console.log("JS Running");
 
 const students = [
-  {
-    id: "UNI-101",
-    name: "Ali Khan",
-    semesters: [
-      { semester: 1, subjects: [
-        { name: "Math I", marks: 78 },
-        { name: "Programming Fundamentals", marks: 85 },
-        { name: "English", marks: 72 },
-        { name: "Physics", marks: 68 },
-        { name: "Islamic Studies", marks: 80 }
-      ]},
-      { semester: 2, subjects: [
-        { name: "Math II", marks: 74 },
-        { name: "OOP", marks: 88 },
-        { name: "Communication Skills", marks: 70 },
-        { name: "DLD", marks: 65 },
-        { name: "Pakistan Studies", marks: 82 }
-      ]},
-      { semester: 3, subjects: [
-        { name: "Data Structures", marks: 90 },
-        { name: "Database", marks: 84 },
-        { name: "Discrete Math", marks: 76 },
-        { name: "SE", marks: 81 },
-        { name: "Statistics", marks: 73 }
-      ]},
-      { semester: 4, subjects: [
-        { name: "OS", marks: 86 },
-        { name: "CN", marks: 79 },
-        { name: "Web Dev", marks: 92 },
-        { name: "DAA", marks: 75 },
-        { name: "Technical Writing", marks: 80 }
-      ]},
-      { semester: 5, subjects: [
-        { name: "AI", marks: 88 },
-        { name: "ML", marks: 83 },
-        { name: "Mobile Dev", marks: 91 },
-        { name: "Info Security", marks: 77 },
-        { name: "Entrepreneurship", marks: 85 }
-      ]}
-    ]
-  },
+    {
+        name: "Ali Khan",
+        id: "UNI-401",
+        semesters: {
 
-  {
-    id: "UNI-102",
-    name: "Sara Ahmed",
-    semesters: [
-      { semester: 1, subjects: [
-        { name: "Math I", marks: 82 },
-        { name: "Programming Fundamentals", marks: 79 },
-        { name: "English", marks: 88 },
-        { name: "Physics", marks: 74 },
-        { name: "Islamic Studies", marks: 90 }
-      ]},
-      { semester: 2, subjects: [
-        { name: "Math II", marks: 80 },
-        { name: "OOP", marks: 83 },
-        { name: "Communication Skills", marks: 85 },
-        { name: "DLD", marks: 72 },
-        { name: "Pakistan Studies", marks: 88 }
-      ]},
-      { semester: 3, subjects: [
-        { name: "Data Structures", marks: 87 },
-        { name: "Database", marks: 90 },
-        { name: "Discrete Math", marks: 78 },
-        { name: "SE", marks: 85 },
-        { name: "Statistics", marks: 80 }
-      ]},
-      { semester: 4, subjects: [
-        { name: "OS", marks: 84 },
-        { name: "CN", marks: 88 },
-        { name: "Web Dev", marks: 93 },
-        { name: "DAA", marks: 82 },
-        { name: "Technical Writing", marks: 86 }
-      ]},
-      { semester: 5, subjects: [
-        { name: "AI", marks: 90 },
-        { name: "ML", marks: 89 },
-        { name: "Mobile Dev", marks: 94 },
-        { name: "Info Security", marks: 85 },
-        { name: "Entrepreneurship", marks: 88 }
-      ]}
-    ]
-  },
+            1: {
+                maths: 78, chem: 70, programming: 82, english: 75, physics: 68
+            },
 
-  {
-    id: "UNI-103",
-    name: "Usman Raza",
-    semesters: generateSemesters(70, 88)
-  },
-  {
-    id: "UNI-104",
-    name: "Ayesha Noor",
-    semesters: generateSemesters(75, 92)
-  },
-  {
-    id: "UNI-105",
-    name: "Hamza Ali",
-    semesters: generateSemesters(60, 85)
-  },
-  {
-    id: "UNI-106",
-    name: "Zainab Fatima",
-    semesters: generateSemesters(78, 95)
-  },
-  {
-    id: "UNI-107",
-    name: "Bilal Hussain",
-    semesters: generateSemesters(65, 82)
-  },
-  {
-    id: "UNI-108",
-    name: "Hira Sheikh",
-    semesters: generateSemesters(72, 90)
-  },
-  {
-    id: "UNI-109",
-    name: "Ahmed Salman",
-    semesters: generateSemesters(68, 86)
-  },
-  {
-    id: "UNI-110",
-    name: "Noor Malik",
-    semesters: generateSemesters(80, 96)
-  }
+            2: {
+                maths: 72, phy: 69, javascript: 80, oop: 76, stats: 71
+            },
+
+            3: {
+                dsa: 74, db: 78, os: 70, se: 73, discrete: 69
+            },
+
+            4: {
+                cn: 76, web: 85, daa: 72, ai: 78, techWriting: 80
+            },
+
+            5: {
+                ml: 81, mobile: 84, security: 75, iot: 70, entrepreneurship: 82
+            }
+        }
+    },
+
+    {
+        name: "Sara Ahmed",
+        id: "UNI-402",
+        semesters: {
+
+            1: {
+                maths: 88, chem: 84, programming: 90, english: 86, physics: 82
+            },
+
+            2: {
+                maths: 85, phy: 80, javascript: 88, oop: 87, stats: 83
+            },
+
+            3: {
+                dsa: 89, db: 91, os: 85, se: 88, discrete: 84
+            },
+
+            4: {
+                cn: 87, web: 92, daa: 86, ai: 90, techWriting: 88
+            },
+
+            5: {
+                ml: 93, mobile: 91, security: 89, iot: 86, entrepreneurship: 90
+            }
+        }
+    },
+
+    {
+        name: "Usman Raza",
+        id: "UNI-403",
+        semesters: {
+
+            1: {
+                maths: 65, chem: 60, programming: 68, english: 66, physics: 62
+            },
+
+            2: {
+                maths: 64, phy: 61, javascript: 67, oop: 65, stats: 63
+            },
+
+            3: {
+                dsa: 66, db: 69, os: 64, se: 65, discrete: 62
+            },
+
+            4: {
+                cn: 67, web: 70, daa: 64, ai: 66, techWriting: 68
+            },
+
+            5: {
+                ml: 69, mobile: 71, security: 65, iot: 63, entrepreneurship: 68
+            }
+        }
+    },
+
+    {
+        name: "Ayesha Noor",
+        id: "UNI-404",
+        semesters: {
+
+            1: {
+                maths: 92, chem: 90, programming: 94, english: 91, physics: 89
+            },
+
+            2: {
+                maths: 90, phy: 88, javascript: 93, oop: 92, stats: 89
+            },
+
+            3: {
+                dsa: 91, db: 94, os: 90, se: 92, discrete: 88
+            },
+
+            4: {
+                cn: 93, web: 96, daa: 91, ai: 94, techWriting: 92
+            },
+
+            5: {
+                ml: 95, mobile: 97, security: 93, iot: 90, entrepreneurship: 94
+            }
+        }
+    },
+
+    {
+        name: "Hamza Ali",
+        id: "UNI-405",
+        semesters: {
+
+            1: {
+                maths: 72, chem: 68, programming: 74, english: 71, physics: 67
+            },
+
+            2: {
+                maths: 70, phy: 66, javascript: 73, oop: 72, stats: 69
+            },
+
+            3: {
+                dsa: 71, db: 74, os: 70, se: 72, discrete: 68
+            },
+
+            4: {
+                cn: 73, web: 78, daa: 71, ai: 74, techWriting: 76
+            },
+
+            5: {
+                ml: 77, mobile: 79, security: 72, iot: 69, entrepreneurship: 75
+            }
+        }
+    }
 ];
 
-// helper to keep data realistic without repetition
-function generateSemesters(min, max) {
-  const subjects = [
-    ["Math I","PF","English","Physics","Islamic Studies"],
-    ["Math II","OOP","Comm Skills","DLD","Pak Studies"],
-    ["DS","DB","Discrete Math","SE","Stats"],
-    ["OS","CN","Web Dev","DAA","Tech Writing"],
-    ["AI","ML","Mobile Dev","Info Security","Entrepreneurship"]
-  ];
 
-  return subjects.map((subList, i) => ({
-    semester: i + 1,
-    subjects: subList.map(s => ({
-      name: s,
-      marks: Math.floor(Math.random() * (max - min + 1)) + min
-    }))
-  }));
-}
+console.log(students);
