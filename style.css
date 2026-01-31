@@ -5,12 +5,8 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1f102a, #3a1c4a);
     background: linear-gradient(180deg, #faf6fc, #efe8f4);
     font-family: 'Times New Roman', Times, serif;
-
-
-
     display: flex;
     align-items: center;
     justify-content: center;
