@@ -46,12 +46,13 @@ body {
   height: 30px;
 }
 
-.search-btn {
+#search-btn {
   padding: 8px 5px;
   color: #ffffff;
   background-color: var(---primary-color---);
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 
 #main-table {
