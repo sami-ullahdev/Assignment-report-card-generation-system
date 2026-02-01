@@ -1,24 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(180deg, #faf6fc, #efe8f4);
-    font-family: 'Times New Roman', Times, serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  background: linear-gradient(180deg, #faf6fc, #efe8f4);
+  display: flex;
+  align-items: center;
+  font-family: roboto, sans-serif;
+  justify-content: center;
+  height: 100vh;
 }
 
 .main-container {
-    background-color: #6d9992;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 15px;
-    height: 500px;
-    width: 800px;
-    max-width: 800px;
-    border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 15px;
+  height: 600px;
+  width: 800px;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.input-line {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+#main-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, sans-serif;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+}
+
+#main-table thead {
+  background-color: #440083;
+  color: #fff;
+}
+
+#main-table th:first-child,
+#main-table td:first-child {
+  text-align: left;
+}
+
+#main-table th,
+#main-table td {
+  padding: 14px 16px;
+  text-align: center;
+}
+
+#main-table tbody tr td , th {
+  border: 1px solid #e5e7eb;
+}
+
+#main-table tbody tr:hover {
+  background-color: #f9fafb;
+  cursor: pointer;
 }
