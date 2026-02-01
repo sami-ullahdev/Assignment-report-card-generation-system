@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  ---primary-color---: #440083;
+}
+
 body {
   background: linear-gradient(180deg, #faf6fc, #efe8f4);
   display: flex;
@@ -32,7 +36,21 @@ body {
 .input-line {
   display: flex;
   gap: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.input-line > div> input {
+  width: 120px;
+  padding: 5px;
+  height: 30px;
+}
+
+.search-btn {
+  padding: 8px 5px;
+  color: #ffffff;
+  background-color: var(---primary-color---);
+  border-radius: 8px;
 }
 
 #main-table {
@@ -47,18 +65,14 @@ body {
 }
 
 #main-table thead {
-  background-color: #440083;
+  background-color: var(---primary-color---);
   color: #fff;
 }
 
-#main-table th:first-child,
-#main-table td:first-child {
-  text-align: left;
-}
 
 #main-table th,
 #main-table td {
-  padding: 14px 16px;
+  padding: 6px 20px;
   text-align: center;
 }
 
@@ -69,4 +83,10 @@ body {
 #main-table tbody tr:hover {
   background-color: #f9fafb;
   cursor: pointer;
+}
+
+#main-table .bgc-color{
+  color: #ffffff;
+  background-color: var(---primary-color---);
+  
 }
