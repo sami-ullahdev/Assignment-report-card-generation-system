@@ -41,8 +41,8 @@ body {
 }
 
 .input-line > div> input {
-  width: 120px;
-  padding: 5px;
+  width: 135px;
+  padding: 2px;
   height: 30px;
 }
 
@@ -51,6 +51,7 @@ body {
   color: #ffffff;
   background-color: var(---primary-color---);
   border-radius: 8px;
+  border: none;
 }
 
 #main-table {
