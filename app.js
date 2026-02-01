@@ -136,3 +136,7 @@ const students = [
         }
     }
 ];
+
+let input = document.getElementById("input");
+let searchbtn = document.getElementById("search-btn");
+let maintable = document.getElementById("main-table");
