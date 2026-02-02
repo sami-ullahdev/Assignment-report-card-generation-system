@@ -1,18 +1,19 @@
 console.log("JS Running");
 
 const students = [
-  {
-    name: "Ali Khan",
-    id: "101",
-    semesters: {
-      1: { maths: 78, chem: 70, programming: 82, english: 75, physics: 68 },
-      2: { maths: 72, phy: 69, javascript: 80, oop: 76, stats: 71 },
-      3: { dsa: 74, db: 78, os: 70, se: 73, discrete: 69 },
-      4: { cn: 76, web: 85, daa: 72, ai: 78, techWriting: 80 },
-      5: { ml: 81, mobile: 84, security: 75, iot: 70, entrepreneurship: 82 }
-    }
-  },
-
+  
+    {
+      name: "Ali Khan",
+      id: "101",
+      semesters: {
+        1: { maths: 78, chem: 70, programming: 82, english: 75, physics: 68 },
+        2: { maths: 72, phy: 69, javascript: 80, oop: 76, stats: 71 },
+        3: { dsa: 74, db: 78, os: 70, se: 73, discrete: 69 },
+        4: { cn: 76, web: 85, daa: 72, ai: 78, techWriting: 80 },
+        5: { ml: 81, mobile: 84, security: 75, iot: 70, entrepreneurship: 82 }
+      }
+    },
+  
   {
     name: "Sara Ahmed",
     id: "102",
@@ -62,27 +63,143 @@ const students = [
   }
 ];
 
-let searchBtn = document.getElementById("search-btn");
-let input = document.getElementById("input").value.trim();
-let mainTable = document.getElementById("main-table");
+
+// let mainTableHtml = `
+//         <h2>${students.name}</h2>
+//             <thead>
+//                 <tr>
+//                     <th>Subject</th>
+//                     <th>Sem 1</th>
+//                     <th>Sem 2</th>
+//                     <th>Sem 3</th>
+//                     <th>Sem 4</th>
+//                     <th>Sem 5</th>
+//                 </tr>
+//             </thead>
+
+//             <tbody>
+//                 <tr>
+//                     <td>English</td>
+//                     <td>85</td>
+//                     <td>52</td>
+//                     <td>32</td>
+//                     <td>66</td>
+//                     <td>98</td>
+//                 </tr>
+
+//                 <tr>
+//                     <td>Math</td>
+//                     <td>85</td>
+//                     <td>52</td>
+//                     <td>32</td>
+//                     <td>66</td>
+//                     <td>98</td>
+//                 </tr>
+
+//                 <tr>
+//                     <td>P.Fundamental</td>
+//                     <td>86</td>
+//                     <td>92</td>
+//                     <td>78</td>
+//                     <td>89</td>
+//                     <td>98</td>
+//                 </tr>
+
+//                 <tr>
+//                     <td>English</td>
+//                     <td>85</td>
+//                     <td>52</td>
+//                     <td>32</td>
+//                     <td>66</td>
+//                     <td>98</td>
+//                 </tr>
+
+//                 <tr>
+//                     <td>English</td>
+//                     <td>85</td>
+//                     <td>52</td>
+//                     <td>32</td>
+//                     <td>66</td>
+//                     <td>98</td>
+//                 </tr>
+
+//                 <tr>
+//                     <th class="bgc-color">Total</th>
+//                     <td>85</td>
+//                     <td>52</td>
+//                     <td>32</td>
+//                     <td>66</td>
+//                     <td>98</td>
+//                 </tr>
+
+//                 <tr>
+//                     <th class="bgc-color">Percentage</th>
+//                     <td>85</td>
+//                     <td>52</td>
+//                     <td>32</td>
+//                     <td>66</td>
+//                     <td>98</td>
+//                 </tr>
+
+//                 <tr>
+//                     <th class="bgc-color">Grade</th>
+//                     <td>85</td>
+//                     <td>52</td>
+//                     <td>32</td>
+//                     <td>66</td>
+//                     <td>98</td>
+//                 </tr>
+
+//                 <tr>
+//                     <th class="bgc-color">status</th>
+//                     <td>85</td>
+//                     <td>52</td>
+//                     <td>32</td>
+//                     <td>66</td>
+//                     <td>98</td>
+//                 </tr>
+//             </tbody>
+// `
+
+
+const searchBtn = document.getElementById("search-btn");
+const mainTable = document.getElementById("main-table");
 
 
 function inputhandler() {
-
+  const input = document.getElementById("input").value.trim();
   mainTable.innerHTML = "";
 
-  if(input === ""){
-    mainTable.innerHTML = "<p>Please Enter Roll Number</p>"
+
+
+  if (input === "") {
+    mainTable.innerHTML = "<p>Please Enter Your Roll Number.</p>"
     return;
   };
 
-  let student = students.find(s => s.id === input)
+  const student = students.find(s => s.id === input);
 
-  if(!student){
-    resultDiv.innerHTML = "<p>Student not found</p>";
+  if (!student) {
+    mainTable.innerHTML += "<p>Student not found</p>";
     return;
   }
 
+  let mainTableHtml = `
+    <h2>${students[0].name} (ID: ${students[0].id})</h2>
+    <table >
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Sem 1</th>
+          <th>Sem 2</th>
+          <th>Sem 3</th>
+          <th>Sem 4</th>
+          <th>Sem 5</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+  mainTable.innerHTML += mainTableHtml;
 }
 
 function grade(p) {
@@ -93,3 +210,4 @@ function grade(p) {
   return "F";
 }
 searchBtn.addEventListener("click", inputhandler);
+
