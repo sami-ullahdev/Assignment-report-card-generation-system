@@ -1,19 +1,19 @@
 console.log("JS Running");
 
 const students = [
-  
-    {
-      name: "Ali Khan",
-      id: "101",
-      semesters: {
-        1: { maths: 78, chem: 70, programming: 82, english: 75, physics: 68 },
-        2: { maths: 72, phy: 69, javascript: 80, oop: 76, stats: 71 },
-        3: { dsa: 74, db: 78, os: 70, se: 73, discrete: 69 },
-        4: { cn: 76, web: 85, daa: 72, ai: 78, techWriting: 80 },
-        5: { ml: 81, mobile: 84, security: 75, iot: 70, entrepreneurship: 82 }
-      }
-    },
-  
+
+  {
+    name: "Ali Khan",
+    id: "101",
+    semesters: {
+      1: { maths: 78, chem: 70, programming: 82, english: 75, physics: 68 },
+      2: { maths: 72, phy: 69, javascript: 80, oop: 76, stats: 71 },
+      3: { dsa: 74, db: 78, os: 70, se: 73, discrete: 69 },
+      4: { cn: 76, web: 85, daa: 72, ai: 78, techWriting: 80 },
+      5: { ml: 81, mobile: 84, security: 75, iot: 70, entrepreneurship: 82 }
+    }
+  },
+
   {
     name: "Sara Ahmed",
     id: "102",
@@ -185,22 +185,20 @@ function inputhandler() {
   }
 
   let mainTableHtml = `
-    <h2>${students[0].name} (ID: ${students[0].id})</h2>
-    <table >
-      <thead>
-        <tr>
-          <th>Subject</th>
-          <th>Sem 1</th>
-          <th>Sem 2</th>
-          <th>Sem 3</th>
-          <th>Sem 4</th>
-          <th>Sem 5</th>
-        </tr>
-      </thead>
-      <tbody>
-  `;
-  mainTable.innerHTML += mainTableHtml;
+          <h2>${student.name} (ID: ${student.id})</h2>
+                <tr>
+                  <th class="bgc-color">Subject</th>
+                  <th class="bgc-color">Sem 1</th>
+                  <th class="bgc-color">Sem 2</th>
+                  <th class="bgc-color">Sem 3</th>
+                  <th class="bgc-color">Sem 4</th>
+                  <th class="bgc-color">Sem 5</th>
+                </tr>
+`;
+  mainTable.innerHTML = mainTableHtml;
+  
 }
+
 
 function grade(p) {
   if (p >= 85) return "A";
@@ -210,4 +208,3 @@ function grade(p) {
   return "F";
 }
 searchBtn.addEventListener("click", inputhandler);
-
