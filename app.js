@@ -1,176 +1,83 @@
 console.log("JS Running");
 
 const students = [
+  {
+    name: "Sara Ahmed",
+    id: "101",
+    semesters: {
+      1: { maths: 88, chemistry: 44, programming: 90, english: 86, physics: 82 },
+      2: { maths: 85, chemistry: 50, programming: 88, english: 87, physics: 53 },
+      3: { maths: 59, chemistry: 86, programming: 91, english: 78, physics: 84 },
+      4: { maths: 83, chemistry: 85, programming: 72, english: 89, physics: 26 },
+      5: { maths: 55, chemistry: 68, programming: 93, english: 90, physics: 86 }
+    }
+  },
 
   {
     name: "Ali Khan",
-    id: "101",
-    semesters: {
-      1: { maths: 78, chem: 70, programming: 82, english: 75, physics: 68 },
-      2: { maths: 72, phy: 69, javascript: 80, oop: 76, stats: 71 },
-      3: { dsa: 74, db: 78, os: 70, se: 73, discrete: 69 },
-      4: { cn: 76, web: 85, daa: 72, ai: 78, techWriting: 80 },
-      5: { ml: 81, mobile: 84, security: 75, iot: 70, entrepreneurship: 82 }
-    }
-  },
-
-  {
-    name: "Sara Ahmed",
     id: "102",
     semesters: {
-      1: { maths: 88, chem: 84, programming: 90, english: 86, physics: 82 },
-      2: { maths: 85, phy: 80, javascript: 88, oop: 87, stats: 83 },
-      3: { dsa: 89, db: 91, os: 85, se: 88, discrete: 84 },
-      4: { cn: 87, web: 92, daa: 86, ai: 90, techWriting: 88 },
-      5: { ml: 93, mobile: 91, security: 89, iot: 86, entrepreneurship: 90 }
-    }
-  },
-
-  {
-    name: "Usman Raza",
-    id: "103",
-    semesters: {
-      1: { maths: 65, chem: 60, programming: 68, english: 66, physics: 62 },
-      2: { maths: 64, phy: 61, javascript: 67, oop: 65, stats: 63 },
-      3: { dsa: 66, db: 69, os: 64, se: 65, discrete: 62 },
-      4: { cn: 67, web: 70, daa: 64, ai: 66, techWriting: 68 },
-      5: { ml: 69, mobile: 71, security: 65, iot: 63, entrepreneurship: 68 }
+      1: { maths: 68, chemistry: 72, programming: 85, english: 75, physics: 50 },
+      2: { maths: 74, chemistry: 50, programming: 62, english: 76, physics: 72 },
+      3: { maths: 46, chemistry: 73, programming: 24, english: 77, physics: 84 },
+      4: { maths: 79, chemistry: 85, programming: 85, english: 78, physics: 76 },
+      5: { maths: 21, chemistry: 47, programming: 87, english: 80, physics: 58 }
     }
   },
 
   {
     name: "Ayesha Noor",
-    id: "104",
+    id: "103",
     semesters: {
-      1: { maths: 92, chem: 90, programming: 94, english: 91, physics: 89 },
-      2: { maths: 90, phy: 88, javascript: 93, oop: 92, stats: 89 },
-      3: { dsa: 91, db: 94, os: 90, se: 92, discrete: 88 },
-      4: { cn: 93, web: 96, daa: 91, ai: 94, techWriting: 92 },
-      5: { ml: 95, mobile: 97, security: 93, iot: 90, entrepreneurship: 94 }
+      1: { maths: 42, chemistry: 84, programming: 85, english: 50, physics: 78 },
+      2: { maths: 84, chemistry: 99, programming: 87, english: 32, physics: 80 },
+      3: { maths: 86, chemistry: 83, programming: 89, english: 84, physics: 82 },
+      4: { maths: 58, chemistry: 55, programming: 91, english: 56, physics: 54 },
+      5: { maths: 90, chemistry: 87, programming: 93, english: 48, physics: 96 }
     }
   },
 
   {
-    name: "Hamza Ali",
+    name: "Hassan Raza",
+    id: "104",
+    semesters: {
+      1: { maths: 70, chemistry: 68, programming: 75, english: 32, physics: 69 },
+      2: { maths: 99, chemistry: 70, programming: 67, english: 54, physics: 71 },
+      3: { maths: 54, chemistry: 92, programming: 39, english: 17, physics: 43 },
+      4: { maths: 76, chemistry: 64, programming: 31, english: 78, physics: 75 },
+      5: { maths: 38, chemistry: 56, programming: 91, english: 10, physics: 77 }
+    }
+  },
+
+  {
+    name: "Usman Tariq",
     id: "105",
     semesters: {
-      1: { maths: 72, chem: 68, programming: 74, english: 71, physics: 67 },
-      2: { maths: 70, phy: 66, javascript: 73, oop: 72, stats: 69 },
-      3: { dsa: 71, db: 74, os: 70, se: 72, discrete: 68 },
-      4: { cn: 73, web: 78, daa: 71, ai: 74, techWriting: 76 },
-      5: { ml: 77, mobile: 79, security: 72, iot: 69, entrepreneurship: 75 }
+      1: { maths: 91, chemistry: 88, programming: 94, english: 89, physics: 87 },
+      2: { maths: 82, chemistry: 79, programming: 95, english: 90, physics: 88 },
+      3: { maths: 93, chemistry: 90, programming: 96, english: 91, physics: 69 },
+      4: { maths: 64, chemistry: 81, programming: 97, english: 92, physics: 70 },
+      5: { maths: 55, chemistry: 92, programming: 98, english: 93, physics: 99 }
     }
   }
 ];
 
 
-// let mainTableHtml = `
-//         <h2>${students.name}</h2>
-//             <thead>
-//                 <tr>
-//                     <th>Subject</th>
-//                     <th>Sem 1</th>
-//                     <th>Sem 2</th>
-//                     <th>Sem 3</th>
-//                     <th>Sem 4</th>
-//                     <th>Sem 5</th>
-//                 </tr>
-//             </thead>
-
-//             <tbody>
-//                 <tr>
-//                     <td>English</td>
-//                     <td>85</td>
-//                     <td>52</td>
-//                     <td>32</td>
-//                     <td>66</td>
-//                     <td>98</td>
-//                 </tr>
-
-//                 <tr>
-//                     <td>Math</td>
-//                     <td>85</td>
-//                     <td>52</td>
-//                     <td>32</td>
-//                     <td>66</td>
-//                     <td>98</td>
-//                 </tr>
-
-//                 <tr>
-//                     <td>P.Fundamental</td>
-//                     <td>86</td>
-//                     <td>92</td>
-//                     <td>78</td>
-//                     <td>89</td>
-//                     <td>98</td>
-//                 </tr>
-
-//                 <tr>
-//                     <td>English</td>
-//                     <td>85</td>
-//                     <td>52</td>
-//                     <td>32</td>
-//                     <td>66</td>
-//                     <td>98</td>
-//                 </tr>
-
-//                 <tr>
-//                     <td>English</td>
-//                     <td>85</td>
-//                     <td>52</td>
-//                     <td>32</td>
-//                     <td>66</td>
-//                     <td>98</td>
-//                 </tr>
-
-//                 <tr>
-//                     <th class="bgc-color">Total</th>
-//                     <td>85</td>
-//                     <td>52</td>
-//                     <td>32</td>
-//                     <td>66</td>
-//                     <td>98</td>
-//                 </tr>
-
-//                 <tr>
-//                     <th class="bgc-color">Percentage</th>
-//                     <td>85</td>
-//                     <td>52</td>
-//                     <td>32</td>
-//                     <td>66</td>
-//                     <td>98</td>
-//                 </tr>
-
-//                 <tr>
-//                     <th class="bgc-color">Grade</th>
-//                     <td>85</td>
-//                     <td>52</td>
-//                     <td>32</td>
-//                     <td>66</td>
-//                     <td>98</td>
-//                 </tr>
-
-//                 <tr>
-//                     <th class="bgc-color">status</th>
-//                     <td>85</td>
-//                     <td>52</td>
-//                     <td>32</td>
-//                     <td>66</td>
-//                     <td>98</td>
-//                 </tr>
-//             </tbody>
-// `
-
-
 const searchBtn = document.getElementById("search-btn");
 const mainTable = document.getElementById("main-table");
 
+function grade(p) {
+  if (p >= 85) return "A";
+  if (p >= 70) return "B";
+  if (p >= 55) return "C";
+  if (p >= 40) return "D";
+  return "F";
+}
+const gradestatus = (g) => { g === "F" ? "Fail" : "Pass" };
 
-function inputhandler() {
+function BtnHandler() {
   const input = document.getElementById("input").value.trim();
   mainTable.innerHTML = "";
-
-
 
   if (input === "") {
     mainTable.innerHTML = "<p>Please Enter Your Roll Number.</p>"
@@ -184,27 +91,100 @@ function inputhandler() {
     return;
   }
 
-  let mainTableHtml = `
+  let htmlTable = `
           <h2>${student.name} (ID: ${student.id})</h2>
                 <tr>
-                  <th class="bgc-color">Subject</th>
-                  <th class="bgc-color">Sem 1</th>
-                  <th class="bgc-color">Sem 2</th>
-                  <th class="bgc-color">Sem 3</th>
-                  <th class="bgc-color">Sem 4</th>
-                  <th class="bgc-color">Sem 5</th>
+                  <th>Subject</th>
+                  <th>Sem 1</th>
+                  <th>Sem 2</th>
+                  <th>Sem 3</th>
+                  <th>Sem 4</th>
+                  <th>Sem 5</th>
                 </tr>
+
+                <tr>
+                  <td>Maths</td>
+                  <td>${student.semesters[1].maths}</td>
+                  <td>${student.semesters[2].maths}</td>  
+                  <td>${student.semesters[3].maths}</td>
+                  <td>${student.semesters[4].maths}</td>
+                  <td>${student.semesters[5].maths}</td>
+                </tr> 
+
+                <tr>
+                  <td>Chemistry</td>
+                  <td>${student.semesters[1].chemistry}</td>
+                  <td>${student.semesters[2].chemistry}</td>  
+                  <td>${student.semesters[3].chemistry}</td>
+                  <td>${student.semesters[4].chemistry}</td>
+                  <td>${student.semesters[5].chemistry}</td>
+                </tr>
+
+                <tr>
+                  <td>Programming</td>
+                  <td>${student.semesters[1].programming}</td>
+                  <td>${student.semesters[2].programming}</td>  
+                  <td>${student.semesters[3].programming}</td>
+                  <td>${student.semesters[4].programming}</td>
+                  <td>${student.semesters[5].programming}</td>
+                </tr>
+
+                <tr>  
+                  <td>English</td>
+                  <td>${student.semesters[1].english}</td>
+                  <td>${student.semesters[2].english}</td>
+                  <td>${student.semesters[3].english}</td>
+                  <td>${student.semesters[4].english}</td>
+                  <td>${student.semesters[5].english}</td>
+                </tr>
+
+                <tr>
+                  <td>Physics</td>
+                  <td>${student.semesters[1].physics}</td>
+                  <td>${student.semesters[2].physics}</td>  
+                  <td>${student.semesters[3].physics}</td>
+                  <td>${student.semesters[4].physics}</td>
+                  <td>${student.semesters[5].physics}</td>
+                </tr>
+
+                <tr>
+                  <th>Total</th>
+                  <td>${Object.values(student.semesters[1]).reduce((a, b) => a + b, 0)}</td>
+                  <td>${Object.values(student.semesters[2]).reduce((a, b) => a + b, 0)}</td>
+                  <td>${Object.values(student.semesters[3]).reduce((a, b) => a + b, 0)}</td>
+                  <td>${Object.values(student.semesters[4]).reduce((a, b) => a + b, 0)}</td>
+                  <td>${Object.values(student.semesters[5]).reduce((a, b) => a + b, 0)}</td>
+                </tr>
+
+                <tr>
+                  <th>Percentage</th>
+                  <td>${(Object.values(student.semesters[1]).reduce((a, b) => a + b, 0) / 5).toFixed(2)}%</td>
+                  <td>${(Object.values(student.semesters[2]).reduce((a, b) => a + b, 0) / 5).toFixed(2)}%</td>
+                  <td>${(Object.values(student.semesters[3]).reduce((a, b) => a + b, 0) / 5).toFixed(2)}%</td>
+                  <td>${(Object.values(student.semesters[4]).reduce((a, b) => a + b, 0) / 5).toFixed(2)}%</td>
+                  <td>${(Object.values(student.semesters[5]).reduce((a, b) => a + b, 0) / 5).toFixed(2)}%</td>
+                </tr>
+
+                <tr>
+                  <th>Grade</th>
+                  <td>${grade((Object.values(student.semesters[1]).reduce((a, b) => a + b, 0) / 5))}</td>
+                  <td>${grade((Object.values(student.semesters[2]).reduce((a, b) => a + b, 0) / 5))}</td>
+                  <td>${grade((Object.values(student.semesters[3]).reduce((a, b) => a + b, 0) / 5))}</td>
+                  <td>${grade((Object.values(student.semesters[4]).reduce((a, b) => a + b, 0) / 5))}</td>
+                  <td>${grade((Object.values(student.semesters[5]).reduce((a, b) => a + b, 0) / 5))}</td>
+                </tr>
+
+                <tr>
+                  <th>Status</th>
+                  <td></td>
+                  <td></td>  
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>                 
 `;
-  mainTable.innerHTML = mainTableHtml;
-  
+  mainTable.innerHTML = htmlTable;
+
 }
 
-
-function grade(p) {
-  if (p >= 85) return "A";
-  if (p >= 70) return "B";
-  if (p >= 55) return "C";
-  if (p >= 40) return "D";
-  return "F";
-}
-searchBtn.addEventListener("click", inputhandler);
+searchBtn.addEventListener("click", BtnHandler);
