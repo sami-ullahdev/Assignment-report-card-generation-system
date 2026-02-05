@@ -101,7 +101,8 @@ function BtnHandler() {
                   <th>Sem 4</th>
                   <th>Sem 5</th>
                 </tr>
-
+            
+            <tbody>
                 <tr>
                   <td>Maths</td>
                   <td>${student.semesters[1].maths}</td>
@@ -176,12 +177,14 @@ function BtnHandler() {
 
                 <tr>
                   <th>Status</th>
-                  <td></td>
-                  <td></td>  
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>                 
+                  <td>${grade((Object.values(student.semesters[1]).reduce((a, b) => a + b, 0) / 5)) === "F" ? "Fail" : "Pass"}</td>  
+                  <td>${grade((Object.values(student.semesters[2]).reduce((a, b) => a + b, 0) / 5)) === "F" ? "Fail" : "Pass"}</td>
+                  <td>${grade((Object.values(student.semesters[3]).reduce((a, b) => a + b, 0) / 5)) === "F" ? "Fail" : "Pass"}</td>
+                  <td>${grade((Object.values(student.semesters[4]).reduce((a, b) => a + b, 0) / 5)) === "F" ? "Fail" : "Pass"}</td>
+                  <td>${grade((Object.values(student.semesters[5]).reduce((a, b) => a + b, 0) / 5)) === "F" ? "Fail" : "Pass"}</td>
+                </tr>
+            </tbody>
+
 `;
   mainTable.innerHTML = htmlTable;
 
