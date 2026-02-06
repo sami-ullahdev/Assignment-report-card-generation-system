@@ -9,7 +9,7 @@ const students = [
       2: { maths: 85, chemistry: 50, programming: 88, english: 87, physics: 53 },
       3: { maths: 59, chemistry: 86, programming: 91, english: 78, physics: 84 },
       4: { maths: 83, chemistry: 85, programming: 72, english: 89, physics: 26 },
-      5: { maths: 55, chemistry: 68, programming: 93, english: 90, physics: 86 }
+      5: { maths: 55, chemistry: 8, programming: 93, english: 10, physics: 26 }
     }
   },
 
@@ -73,7 +73,6 @@ function grade(p) {
   if (p >= 40) return "D";
   return "F";
 }
-const gradestatus = (g) => { g === "F" ? "Fail" : "Pass" };
 
 function BtnHandler() {
   const input = document.getElementById("input").value.trim();
@@ -184,10 +183,24 @@ function BtnHandler() {
                   <td>${grade((Object.values(student.semesters[5]).reduce((a, b) => a + b, 0) / 5)) === "F" ? "Fail" : "Pass"}</td>
                 </tr>
             </tbody>
+            <div class="Stutus"></div>
 
 `;
   mainTable.innerHTML = htmlTable;
 
+
+
+  const status = document.querySelector(".Stutus");
+  if (grade((Object.values(student.semesters[1]).reduce((a, b) => a + b, 0) / 5)) === "F" ||
+    grade((Object.values(student.semesters[2]).reduce((a, b) => a + b, 0) / 5)) === "F" ||
+    grade((Object.values(student.semesters[3]).reduce((a, b) => a + b, 0) / 5)) === "F" ||
+    grade((Object.values(student.semesters[4]).reduce((a, b) => a + b, 0) / 5)) === "F" ||
+    grade((Object.values(student.semesters[5]).reduce((a, b) => a + b, 0) / 5)) === "F") {
+    status.innerHTML += "<p style='color: red; font-weight: bold;'>Overall Status: Fail</p>";
+  }
+  else {
+    status.innerHTML += "<p style='color: green; font-weight: bold;'> Overoll Status: Pass</p>";
+  }
 }
 
 searchBtn.addEventListener("click", BtnHandler);
